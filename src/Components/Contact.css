@@ -1,0 +1,9 @@
+.contactUsContainer{
+    padding-left: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+    .contactUsContainer {
+      padding-left: 8px;
+    }
+  }

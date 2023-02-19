@@ -4,11 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+
+
+import { BrowserRouter as Router} from 'react-router-dom';
+//import house context provider 
+import HouseContextProvider from './Components/HouseContext';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <HouseContextProvider>
+  <Router>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Router>
+  </HouseContextProvider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

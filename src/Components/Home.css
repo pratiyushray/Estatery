@@ -1,0 +1,154 @@
+
+body{
+    /* height: 400vh; */
+    width: 100%;
+}
+.homeContainer{
+    background-color: rgb(224, 224, 224);
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../assets/housesearching.svg');
+    background-attachment: fixed;
+    background-size: 1000px 800px;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .homeContainer{
+        display: none;
+        /* background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 500px;
+        background-position: center;
+        background-size: cover;
+        background-image: url('../assets/housesearching.svg');
+        background-attachment: fixed;
+        background-size: 300px 400px;
+        background-repeat: no-repeat;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+    .smallhomeContainer{
+        background-image: url(../assets/housesearchsm.png);
+        width: 100%;
+        height: 300px;
+        background-size: 450px 350px;
+        background-repeat: no-repeat;
+        margin-bottom: 40px;
+    }
+}
+
+.slider{
+    min-height: 40vh;
+    display: grid;
+    place-items: center;
+
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slide-track{
+    display: flex;
+    width: calc(250px*18);
+    animation: scroll 40s linear infinite;
+
+}
+
+.slide-track:hover{
+    animation-play-state: paused;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px*9));
+    }
+}
+
+.slide{
+    height: 250px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+img{
+    width: 100%;
+}
+
+/* GRADIENT SHADOW  */
+
+.slider::before,
+.slider::after{
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.slider::before{
+    left: 0;
+    top: 0;
+}
+
+.slider::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+/* BLOG CONTENT STYLING  */
+.mainBlogContainer{
+    background-image: linear-gradient(to right, rgb(224, 224, 224) , rgb(255, 255, 255));
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding-bottom: 0px;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.blogContainer{
+ margin-left: 25px;
+ margin-top: 25px;
+ 
+}
+
+.blogTime{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.blogContent{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 4px 0px;
+}
+
+.blogAuthor{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.blogAuthor b{
+    font-family:monospace;
+}
